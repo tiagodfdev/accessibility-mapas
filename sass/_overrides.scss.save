@@ -1,0 +1,119 @@
+//
+// Overrides
+// --------------------------------------------------
+//## Style rules that overrides the default theme's ones.
+//## To make it easy to maintain and to avoid cascading problems,
+//## just before the new rules, document the name of the Sass partial
+//## where the original styles leave, group them per folder and keep
+//## them in the same order as the original styles are imported to the main.scss.
+
+//
+// application/
+// --------------------------------------------------
+
+
+// _header.scss
+// #secondary-menu {
+//      margin-top: 14px;
+// }
+
+//_home.scss
+// #home-watermark {
+// 	background-position: right bottom;
+// }
+@keyframes box-entry{
+	0%	{display: none;}
+	from {opacity: 0; right: -10px}
+	to {opacity: 1; right: 0px}
+}
+#nav-developers {
+	background: #bd53aa;
+}
+#home-developers {
+	background: #bd53ac;
+}
+#accessibility {
+	position: fixed;
+	width: 60px !important;
+	height: 60px !important;
+	right: 0 !important;
+	z-index: 99999999 !important;
+	font-family: Arial !important;
+	color: #000;
+	line-height: 1.3 !important;
+	display: block;
+	background-color: #fff !important;
+	border-radius: 30px !important;
+	margin-right: 20px !important;
+	bottom: 160px !important;
+}
+#accessibility img {
+	width: 42px !important;
+	height: 42px !important;
+	margin: 9px !important;
+	padding: 0 !important;
+	max-width: none;
+	display: block;
+}
+#accessibility a {
+	color: #000;
+}
+#accessibility i {
+	font-size: 25px;
+}
+div[vw].enabled {
+	display: block;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 30px;
+	margin-right: 20px;
+	bottom: 90px !important;
+	top: unset !important;
+}
+.accessibility-box{
+	position: relative;
+	display: none;
+	flex-direction: column;
+	opacity: 0;
+	right: -10px;
+	animation: box-entry 0.2 backwards;
+}
+.accessibility-box-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 180px;
+	height: 25px;
+	background-color: #fff !important;
+	left: -190px;
+	top: -80px;
+	border-radius: 10px;
+}
+.accessibility-box-title h1 {
+	font-size: 16px !important;
+	font-family: sans-serif !important;
+	color: #1351b4;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: center !important;
+	font-weight: bold !important;
+	line-height: 25px !important;
+}
+.accessibility-box-wrapper {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	width: 185px;
+	height: 42px;
+	background-color: #fff !important;
+	left: -190px;
+	top: -75px;
+	border-radius: 20px;
+}
+.accessibility-active {
+	display: flex;
+	animation: box-entry 0.2s forwards;
+}
